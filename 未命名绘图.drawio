@@ -1,11 +1,59 @@
-<mxfile host="app.diagrams.net" modified="2023-07-11T06:04:30.182Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="fS7t9wmhHeNQnSz7vu4C" version="21.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-11T08:07:08.553Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="X7AcmvRZMq3-e9OnU2Ji" version="21.5.0" type="github">
   <diagram name="第 1 页" id="5Ny1kzSePx0lt5mofnTc">
-    <mxGraphModel dx="1834" dy="414" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1595" dy="678" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="tmvlulsvm-YrZkXYPVVm-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="-389" y="429" width="120" height="60" as="geometry" />
+        <mxCell id="c3-qinDwcurwDIAjyLe5-72" value="组装业务依赖信息(用户信息、IP)" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;labelBackgroundColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-87" y="352" width="248" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-73" value="根据接口传参(评论对象(产品、文章) + 评论等级(1级、2级))，选择对应的发评论业务实现类" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;labelBackgroundColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-294" y="436" width="663" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-74" value="安全审查" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;labelBackgroundColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-2" y="520" width="80" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-75" value="论重复校验" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;labelBackgroundColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-11" y="604" width="97" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-76" value="实际发放，写入评论表，评论数+1" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;labelBackgroundColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-91" y="688" width="257" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-77" value="发放成功后执行的业务" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;labelBackgroundColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-51" y="772" width="177" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-78" value="同步评论信息到ES" style="whiteSpace=wrap;strokeWidth=2;fontSize=16;labelBackgroundColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-34" y="856" width="144" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-79" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5021421370967742;exitY=1;entryX=0.5000471342383107;entryY=0;rounded=0;fontSize=12;labelBackgroundColor=none;fontColor=default;" edge="1" parent="1" source="c3-qinDwcurwDIAjyLe5-72" target="c3-qinDwcurwDIAjyLe5-73">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-80" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5000471342383107;exitY=1;entryX=0.494140625;entryY=0;rounded=0;fontSize=12;labelBackgroundColor=none;fontColor=default;" edge="1" parent="1" source="c3-qinDwcurwDIAjyLe5-73" target="c3-qinDwcurwDIAjyLe5-74">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-81" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.494140625;exitY=1;entryX=0.5003221649484536;entryY=0;rounded=0;fontSize=12;labelBackgroundColor=none;fontColor=default;" edge="1" parent="1" source="c3-qinDwcurwDIAjyLe5-74" target="c3-qinDwcurwDIAjyLe5-75">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-82" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5003221649484536;exitY=1;entryX=0.5001215953307393;entryY=0;rounded=0;fontSize=12;labelBackgroundColor=none;fontColor=default;" edge="1" parent="1" source="c3-qinDwcurwDIAjyLe5-75" target="c3-qinDwcurwDIAjyLe5-76">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-83" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5001215953307393;exitY=1;entryX=0.5001765536723164;entryY=0;rounded=0;fontSize=12;labelBackgroundColor=none;fontColor=default;" edge="1" parent="1" source="c3-qinDwcurwDIAjyLe5-76" target="c3-qinDwcurwDIAjyLe5-77">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3-qinDwcurwDIAjyLe5-84" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5001765536723164;exitY=1;entryX=0.4967447916666667;entryY=0;rounded=0;fontSize=12;labelBackgroundColor=none;fontColor=default;" edge="1" parent="1" source="c3-qinDwcurwDIAjyLe5-77" target="c3-qinDwcurwDIAjyLe5-78">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
